@@ -12,13 +12,13 @@ def MSEderiv(X, Y, poly, n):
     """
     return np.sum( ( poly(X) - Y ) * (X ** n) ) / len(X)
 
-def poly_reg(X, Y, n, lr, epochs, batch_size):
+def poly_reg(X, Y, n, lr, iterations, batch_size):
     """
     Regression Function - Preform Polynomial regression with order n polynomial, return the best polynomial
     """
     theta = np.random.rand(n+1)
 
-    for i in range(epochs):
+    for i in range(iterations):
         
         poly = np.poly1d(theta)
 
